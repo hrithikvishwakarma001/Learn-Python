@@ -1,0 +1,35 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "name": "Pizza",
+            "price": 12.99,
+            "availability": "yes"
+        },
+        {
+            "id": 2,
+            "name": "Burger",
+            "price": 8.99,
+            "availability": "yes"
+        },
+        {
+            "id": 3,
+            "name": "Pasta",
+            "price": 10.99,
+            "availability": "no"
+        },
+        {
+            "id": 4,
+            "name": "Salad",
+            "price": 6.99,
+            "availability": "yes"
+        },
+        {
+            "id": 5,
+            "name": "Ice Cream",
+            "price": 4.99,
+            "availability": "no"
+        }
+    ],
+    "orders": []
+}
