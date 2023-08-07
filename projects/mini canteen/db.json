@@ -1,0 +1,17 @@
+{
+  "inventory": [
+    {
+      "id": 1,
+      "name": "idly",
+      "price": 200,
+      "availability": "yes"
+    },
+    {
+      "id": 2,
+      "name": "samosa",
+      "price": 150,
+      "availability": "yes"
+    }
+  ],
+  "sales": []
+}
