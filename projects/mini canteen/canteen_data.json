@@ -1,17 +1,24 @@
 {
     "inventory": [
         {
+            "id": 1,
+            "name": "idly",
+            "price": 200,
+            "availability": "no"
+        },
+        {
             "id": 2,
             "name": "samosa",
             "price": 150,
-            "availability": "yes"
-        },
-        {
-            "id": 3,
-            "name": "dosa",
-            "price": 400,
             "availability": "no"
         }
     ],
-    "sales": []
+    "sales": [
+        {
+            "id": 1,
+            "name": "idly",
+            "price": 200,
+            "availability": "no"
+        }
+    ]
 }
