@@ -64,7 +64,7 @@ def update_dish():
 def place_order():
     print("\n Place a new order:")
     order_id = len(data["orders"]) + 1
-    cusomer_name = input("Enter customer name: ")
+    customer_name = input("Enter customer name: ")
     order_dish_ids = input("Enter dish IDs (comma separated eg:1,2,3): ").split(",")
     order_dishes = []
     order_total = 0
@@ -76,18 +76,18 @@ def place_order():
                 order_total += dish["price"]
             elif dish["id"] == int(dish_id) and dish["availability"] == "no":
                 print(f"\n❌ Dish {dish['name']} is not available!")
-    # new_order = {
-    #   "id": order_id,
-    #   "customer_name": cusomer_name,
-    #   "dishes": order_dishes,
-    #   "status": "recieved",
-    #   "total_price": order_total
-    # }
-    # data["orders"].append(new_order)
-    # for dish in order_dishes:
-    #     dish["availability"] = "no"
-    # save_data(data)
-    # print(f"\nOrder #{new_order.order_id} has been placed for {new_order.customer_name}. Total price: ${new_order.total_price:.2f}")
+    new_order = {
+      "id": order_id,
+      "customer_name": customer_name,
+      "dishes": order_dishes,
+      "status": "recieved",
+      "total_price": order_total
+    }
+    data["orders"].append(new_order)
+    for dish in order_dishes:
+        dish["availability"] = "no"
+    save_data(data)
+    print(f"\nOrder #{order_id} has been placed for {customer_name}. Total price: ${order_total:.2f}")
 
 def update_order_status():
     print("\nUpdate order status:")
