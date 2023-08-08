@@ -10,25 +10,25 @@
             "id": 2,
             "name": "Burger",
             "price": 8.99,
-            "availability": "yes"
+            "availability": "no"
         },
         {
             "id": 3,
             "name": "Pasta",
             "price": 10.99,
-            "availability": "yes"
+            "availability": "no"
         },
         {
             "id": 4,
             "name": "Salad",
             "price": 6.99,
-            "availability": "no"
+            "availability": "yes"
         },
         {
-            "id": 5,
-            "name": "Ice Cream",
-            "price": 4.99,
-            "availability": "no"
+            "id": 6,
+            "name": "dosa",
+            "price": 400.0,
+            "availability": "yes"
         }
     ],
     "orders": [
@@ -49,8 +49,28 @@
                     "availability": "no"
                 }
             ],
-            "status": "delivered",
+            "status": "preparing",
             "total_price": 19.98
+        },
+        {
+            "id": 2,
+            "customer_name": "anonymouse",
+            "dishes": [
+                {
+                    "id": 1,
+                    "name": "Pizza",
+                    "price": 12.99,
+                    "availability": "no"
+                },
+                {
+                    "id": 2,
+                    "name": "Burger",
+                    "price": 8.99,
+                    "availability": "no"
+                }
+            ],
+            "status": "recieved",
+            "total_price": 21.98
         }
     ]
 }
