@@ -13,4 +13,5 @@ urlpatterns = [
         name="update_order_status",
     ),
     path('place_order/<int:dish_id>/', views.place_order, name='place_order'),
+    path('search_dish/', views.search_dish, name='search_dish'),
 ]

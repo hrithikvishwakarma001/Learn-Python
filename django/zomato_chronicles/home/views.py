@@ -111,3 +111,17 @@ def place_order(request, dish_id):
         return redirect("orders")
 
     return render(request, "place_order.html", {"current_id": dish_id, "menu": menu})
+
+
+def search_dish(request):
+    query = request.GET.get("search")
+    menu, _ = read_data()
+
+    if query:
+        search_results = [
+            dish for dish in menu if query.lower() in dish["name"].lower()
+        ]
+    else:
+        search_results = menu
+
+    return render(request, "home.html", {"menu": search_results, "query": query})
