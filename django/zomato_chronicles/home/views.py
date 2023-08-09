@@ -21,7 +21,9 @@ def update_dish(request, dish_id):
         dish = menu[dish_id - 1]
         dish["name"] = request.POST.get("name")
         dish["price"] = request.POST.get("price")
-        dish["available"] = [True if request.POST.get("available") == "on" else False][0]
+        dish["available"] = [True if request.POST.get("available") == "on" else False][
+            0
+        ]
         dish["description"] = request.POST.get("description")
         write_data(menu, orders)
         return redirect("home")
@@ -42,16 +44,42 @@ def add_dish(request):
             "available": False,
             "description": request.POST.get("description"),
         }
-      #   print(new_dish)
+        #   print(new_dish)
         if new_dish["name"] == "":
             return HttpResponse("Name cannot be empty")
         if new_dish["price"] == "":
             return HttpResponse("Price cannot be empty")
         if new_dish["description"] == "":
             return HttpResponse("Description cannot be empty")
-         
+
         menu.append(new_dish)
         write_data(menu, orders)
         return redirect("home")
 
     return render(request, "add_dish.html")
+
+
+def orders(request):
+    _, orders = read_data()
+    return render(
+        request,
+        "orders.html",
+        {"orders": orders},
+    )
+
+
+def update_order_status(request, order_id):
+    if request.method == "POST":
+        menu, orders = read_data()
+        order = orders[order_id - 1]
+        order["status"] = request.POST.get("status")
+        write_data(menu, orders)
+        return redirect("orders")
+    else:
+        menu, orders = read_data()
+        order = orders[order_id - 1]
+        return render(
+            request,
+            "update_order_status.html",
+            {"order": order},
+        )

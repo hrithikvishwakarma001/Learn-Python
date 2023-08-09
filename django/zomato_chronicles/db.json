@@ -11,7 +11,7 @@
             "id": 2,
             "name": "Pizzaa",
             "price": 10.99,
-            "available": false,
+            "available": true,
             "description": "Authentic Italian pizza with a variety of toppings."
         },
         {
@@ -32,13 +32,13 @@
             "id": 5,
             "name": "Steak",
             "price": 15.99,
-            "available": false,
+            "available": true,
             "description": "Premium steak cooked to perfection, served with sides."
         },
         {
             "id": 6,
             "name": "Sandwich",
-            "price": 4.99,
+            "price": "4.99",
             "available": true,
             "description": "Classic sandwich with a variety of fillings and flavors."
         },
@@ -47,13 +47,13 @@
             "name": "Soups",
             "price": "3.99",
             "available": true,
-            "description": "Warm and comforting soup with a variety of ingredients\r\n          "
+            "description": "Warm and comforting soup with a variety of ingredients"
         },
         {
             "id": 8,
             "name": "Sushi",
             "price": 12.99,
-            "available": false,
+            "available": true,
             "description": "Fresh sushi rolls with a mix of seafood and flavors."
         },
         {
@@ -67,16 +67,107 @@
             "id": 10,
             "name": "Drinks",
             "price": 2.99,
-            "available": false,
+            "available": true,
             "description": "Refreshing drinks including juices, sodas, and more."
         },
         {
             "id": 11,
             "name": "Chicken tanduri",
             "price": "20.0",
-            "available": false,
-            "description": "This chicken have four legs that's why price is little bit high\r\n          \r\n          \r\n          "
+            "available": true,
+            "description": "This chicken have four legs that's why price is little bit high"
         }
     ],
-    "orders": []
+    "orders": [
+        {
+            "id": 1,
+            "customer_name": "John Doe",
+            "dishes": [
+                {
+                    "id": 1,
+                    "name": "Pasta",
+                    "price": 8.99
+                },
+                {
+                    "id": 3,
+                    "name": "Burger",
+                    "price": 6.99
+                }
+            ],
+            "status": "received",
+            "total_price": 15.98
+        },
+        {
+            "id": 2,
+            "customer_name": "Jane Smith",
+            "dishes": [
+                {
+                    "id": 2,
+                    "name": "Pizzaa",
+                    "price": 10.99
+                },
+                {
+                    "id": 4,
+                    "name": "Salad",
+                    "price": 5.99
+                }
+            ],
+            "status": "preparing",
+            "total_price": 16.98
+        },
+        {
+            "id": 3,
+            "customer_name": "Michael Johnson",
+            "dishes": [
+                {
+                    "id": 5,
+                    "name": "Steak",
+                    "price": 15.99
+                }
+            ],
+            "status": "ready for pickup",
+            "total_price": 15.99
+        },
+        {
+            "id": 4,
+            "customer_name": "Emily Brown",
+            "dishes": [
+                {
+                    "id": 1,
+                    "name": "Pasta",
+                    "price": 8.99
+                },
+                {
+                    "id": 4,
+                    "name": "Salad",
+                    "price": 5.99
+                },
+                {
+                    "id": 5,
+                    "name": "Steak",
+                    "price": 15.99
+                }
+            ],
+            "status": "preparing",
+            "total_price": 30.97
+        },
+        {
+            "id": 5,
+            "customer_name": "David Wilson",
+            "dishes": [
+                {
+                    "id": 3,
+                    "name": "Burger",
+                    "price": 6.99
+                },
+                {
+                    "id": 5,
+                    "name": "Steak",
+                    "price": 15.99
+                }
+            ],
+            "status": "delivered",
+            "total_price": 22.98
+        }
+    ]
 }
