@@ -1,22 +1,29 @@
-<!-- home/templates/add_dish.html -->
-
 {% extends 'base.html' %}
 
-{% block title %}Add New Dish{% endblock %}
+{% block title %}
+  Add Dish
+{% endblock %}
 
 {% block content %}
-    <h1>Add New Dish</h1>
-    <form method="post">
+  <div class="container-sm mt-4 bg-light p-lg-5 d-flex align-items-center flex-column" style="background-color: #f8f9fa; ">
+    <h2 class="mb-4 fw-bolder">Add Dish</h2>
+    <div class="bg-white w-25 p-4 border">
+      <form method="post">
         {% csrf_token %}
-        <label for="dish_name">Dish Name:</label>
-        <input type="text" id="dish_name" name="dish_name" required><br><br>
-        
-        <label for="dish_price">Dish Price:</label>
-        <input type="number" id="dish_price" name="dish_price" step="0.01" required><br><br>
-        
-        <label for="dish_available">Available:</label>
-        <input type="checkbox" id="dish_available" name="dish_available"><br><br>
-        
-        <input type="submit" value="Add Dish">
-    </form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Dish Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" name="price" placeholder="Enter price here" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter short description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 ">Add</button>
+      </form>
+    </div>
+  </div>
 {% endblock %}

@@ -4,62 +4,78 @@
             "id": 1,
             "name": "Pasta",
             "price": 8.99,
-            "available": true
+            "available": true,
+            "description": "Delicious pasta with a variety of sauces and ingredients."
         },
         {
             "id": 2,
             "name": "Pizzaa",
-            "price": "10.99",
+            "price": 10.99,
             "available": false,
-            "description": null
+            "description": "Authentic Italian pizza with a variety of toppings."
         },
         {
             "id": 3,
             "name": "Burger",
             "price": 6.99,
-            "available": true
+            "available": true,
+            "description": "Juicy burger served with crispy fries and toppings."
         },
         {
             "id": 4,
             "name": "Salad",
             "price": 5.99,
-            "available": true
+            "available": true,
+            "description": "Fresh and healthy salad with a mix of vegetables and dressings."
         },
         {
             "id": 5,
             "name": "Steak",
             "price": 15.99,
-            "available": false
+            "available": false,
+            "description": "Premium steak cooked to perfection, served with sides."
         },
         {
             "id": 6,
             "name": "Sandwich",
             "price": 4.99,
-            "available": true
+            "available": true,
+            "description": "Classic sandwich with a variety of fillings and flavors."
         },
         {
             "id": 7,
-            "name": "Soup",
+            "name": "Soups",
             "price": "3.99",
-            "available": false
+            "available": true,
+            "description": "Warm and comforting soup with a variety of ingredients\r\n          "
         },
         {
             "id": 8,
             "name": "Sushi",
-            "price": "12.99",
-            "available": false
+            "price": 12.99,
+            "available": false,
+            "description": "Fresh sushi rolls with a mix of seafood and flavors."
         },
         {
             "id": 9,
             "name": "Dessert",
             "price": 7.99,
-            "available": true
+            "available": true,
+            "description": "Delectable desserts ranging from cakes to ice creams."
         },
         {
             "id": 10,
             "name": "Drinks",
             "price": 2.99,
-            "available": false
+            "available": false,
+            "description": "Refreshing drinks including juices, sodas, and more."
+        },
+        {
+            "id": 11,
+            "name": "Chicken tanduri",
+            "price": "20.0",
+            "available": false,
+            "description": "This chicken have four legs that's why price is little bit high\r\n          \r\n          \r\n          "
         }
     ],
     "orders": []
