@@ -1,14 +1,32 @@
-
 {% extends 'base.html' %}
 
-{% block title %}Zomato Menu{% endblock %}
+{% block title %}
+  Zomato Menu
+{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Zesty Zomato!</h1>
-    <h2>Menu:</h2>
-    <ul>
-        {% for dish in menu %}
-            <li>{{ dish.name }} - ${{ dish.price }} {% if dish.available %}(Available){% else %}(Not Available){% endif %}</li>
-        {% endfor %}
-    </ul>
+  <div class="container mt-4 border p-4 bg-gray-10" style="background-color: #f8f9fa;">
+    <div class="row">
+      {% for dish in menu %}
+        <div class="col-md-3 col-lg-3">
+          <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">${{ dish.price }}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{ dish.name }}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              {% if dish.available %}
+                <button type="button" class="btn btn-dark"><p class="card-text">Grab me🤤</p></button>
+              {% else %}
+                <button type="button" class="btn btn-dark disabled">
+                  <p class="card-text text-danger">
+                    <strong>Not Available</strong> 😒
+                  </p>
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

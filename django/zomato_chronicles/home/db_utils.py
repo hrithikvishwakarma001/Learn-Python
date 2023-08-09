@@ -2,8 +2,6 @@ import json
 
 DB_FILE = 'db.json'
 
-# home/db_utils.py
-
 def read_data():
     with open(DB_FILE, 'r') as file:
         data = json.load(file)

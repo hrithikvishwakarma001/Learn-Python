@@ -22,7 +22,7 @@
       "id": 4,
       "name": "Salad",
       "price": 5.99,
-      "available": true
+      "available": false
     },
     {
       "id": 5,
@@ -40,7 +40,7 @@
       "id": 7,
       "name": "Soup",
       "price": 3.99,
-      "available": true
+      "available": false
     },
     {
       "id": 8,
