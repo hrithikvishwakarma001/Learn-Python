@@ -2,10 +2,10 @@
     "menu": [
         {
             "id": 1,
-            "name": "Pasta",
-            "price": 8.99,
+            "name": "Pastaa",
+            "price": "8.99",
             "available": true,
-            "description": "Delicious pasta with a variety of sauces and ingredients."
+            "description": "Delicious pasta with a variety of sauces and ingredients.\r\n          "
         },
         {
             "id": 2,
