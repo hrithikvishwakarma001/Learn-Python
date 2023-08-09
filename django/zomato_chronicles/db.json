@@ -9,10 +9,10 @@
         },
         {
             "id": 2,
-            "name": "Pizzaa",
-            "price": 10.99,
-            "available": true,
-            "description": "Authentic Italian pizza with a variety of toppings."
+            "name": "Pizza",
+            "price": "10.99",
+            "available": false,
+            "description": "Authentic Italian pizza with a variety of toppings.\r\n          "
         },
         {
             "id": 3,
