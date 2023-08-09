@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Zomato Menu{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Zesty Zomato!</h1>
+    <h2>Menu:</h2>
+    <ul>
+        {% for dish in menu %}
+            <li>{{ dish.name }} - ${{ dish.price }} {% if dish.available %}(Available){% else %}(Not Available){% endif %}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

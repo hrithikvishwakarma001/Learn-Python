@@ -1,0 +1,22 @@
+<!-- home/templates/add_dish.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Add New Dish{% endblock %}
+
+{% block content %}
+    <h1>Add New Dish</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="dish_name">Dish Name:</label>
+        <input type="text" id="dish_name" name="dish_name" required><br><br>
+        
+        <label for="dish_price">Dish Price:</label>
+        <input type="number" id="dish_price" name="dish_price" step="0.01" required><br><br>
+        
+        <label for="dish_available">Available:</label>
+        <input type="checkbox" id="dish_available" name="dish_available"><br><br>
+        
+        <input type="submit" value="Add Dish">
+    </form>
+{% endblock %}
