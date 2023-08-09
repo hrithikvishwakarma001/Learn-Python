@@ -1,65 +1,66 @@
 {
-  "menu": [
-    {
-      "id": 1,
-      "name": "Pasta",
-      "price": 8.99,
-      "available": true
-    },
-    {
-      "id": 2,
-      "name": "Pizza",
-      "price": 10.99,
-      "available": true
-    },
-    {
-      "id": 3,
-      "name": "Burger",
-      "price": 6.99,
-      "available": true
-    },
-    {
-      "id": 4,
-      "name": "Salad",
-      "price": 5.99,
-      "available": false
-    },
-    {
-      "id": 5,
-      "name": "Steak",
-      "price": 15.99,
-      "available": true
-    },
-    {
-      "id": 6,
-      "name": "Sandwich",
-      "price": 4.99,
-      "available": true
-    },
-    {
-      "id": 7,
-      "name": "Soup",
-      "price": 3.99,
-      "available": false
-    },
-    {
-      "id": 8,
-      "name": "Sushi",
-      "price": 12.99,
-      "available": true
-    },
-    {
-      "id": 9,
-      "name": "Dessert",
-      "price": 7.99,
-      "available": true
-    },
-    {
-      "id": 10,
-      "name": "Drinks",
-      "price": 2.99,
-      "available": true
-    }
-  ],
-  "orders": []
+    "menu": [
+        {
+            "id": 1,
+            "name": "Pasta",
+            "price": 8.99,
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Pizzaa",
+            "price": "10.99",
+            "available": false,
+            "description": null
+        },
+        {
+            "id": 3,
+            "name": "Burger",
+            "price": 6.99,
+            "available": true
+        },
+        {
+            "id": 4,
+            "name": "Salad",
+            "price": 5.99,
+            "available": true
+        },
+        {
+            "id": 5,
+            "name": "Steak",
+            "price": 15.99,
+            "available": false
+        },
+        {
+            "id": 6,
+            "name": "Sandwich",
+            "price": 4.99,
+            "available": true
+        },
+        {
+            "id": 7,
+            "name": "Soup",
+            "price": "3.99",
+            "available": false
+        },
+        {
+            "id": 8,
+            "name": "Sushi",
+            "price": "12.99",
+            "available": false
+        },
+        {
+            "id": 9,
+            "name": "Dessert",
+            "price": 7.99,
+            "available": true
+        },
+        {
+            "id": 10,
+            "name": "Drinks",
+            "price": 2.99,
+            "available": false
+        }
+    ],
+    "orders": []
 }

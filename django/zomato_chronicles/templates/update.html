@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Update Dish
+{% endblock %}
+
+{% block content %}
+  <div class="container-sm mt-4 bg-light p-lg-5 d-flex align-items-center flex-column   " style="background-color: #f8f9fa; ">
+    <h2 class="mb-4 fw-bolder">Update Dish</h2>
+    <div class="bg-white w-25 p-4 border   ">
+      <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Dish Name</label>
+          <input type="text" class="form-control" id="name" name="name" value="{{ dish.name }}">
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" name="price" value="{{ dish.price }}">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="available" name="available" {% if dish.available %}checked{% endif %}>
+          <label class="form-check-label" for="available">Available</label>
+        </div>
+        <button type="submit" class="btn btn-dark">Update</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

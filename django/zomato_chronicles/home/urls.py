@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path("", views.read_dish, name="home"),
     # path("add_dish/", views.add_dish, name="add_dish"),
+    path("update_dish/<int:dish_id>/", views.update_dish, name="update_dish"),
 ]

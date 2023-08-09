@@ -14,15 +14,26 @@
             <div class="card-body">
               <h5 class="card-title">{{ dish.name }}</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              {% if dish.available %}
-                <button type="button" class="btn btn-dark"><p class="card-text">Grab me🤤</p></button>
-              {% else %}
-                <button type="button" class="btn btn-dark disabled">
-                  <p class="card-text text-danger">
-                    <strong>Not Available</strong> 😒
-                  </p>
-                </button>
-              {% endif %}
+           <div class="d-flex justify-content-between ">
+                <form method="post">
+                  {% csrf_token %}
+                  {{ order_form.dish_id.as_hidden }}
+                  {% if dish.available %}
+                    <button type="submit" class="btn btn-dark"><p class="card-text">Grab me🤤</p></button>
+                  {% else %}
+                    <button type="button" class="btn btn-dark disabled">
+                      <p class="card-text text-danger">
+                        <strong>Not Available</strong> 😒
+                      </p>
+                    </button>
+                  {% endif %}
+                </form>
+                <form method="get"action="{% url 'update_dish' dish.id %}">
+                  {% csrf_token %}
+                  {{ order_form.dish_id.as_hidden }}
+                  <button type="submit" class="btn btn-dark"><p class="card-text">Edit ✏</p></button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
