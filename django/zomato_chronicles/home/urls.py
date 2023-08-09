@@ -14,4 +14,5 @@ urlpatterns = [
     ),
     path('place_order/<int:dish_id>/', views.place_order, name='place_order'),
     path('search_dish/', views.search_dish, name='search_dish'),
+    path('delete_dish/<int:dish_id>/', views.delete_dish, name='delete_dish'),
 ]

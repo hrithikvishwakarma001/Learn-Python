@@ -12,7 +12,12 @@
       {% for dish in menu %}
         <div class="col-md-3 col-lg-3">
           <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-            <div class="card-header">${{ dish.price }}</div>
+            <div class="card-header d-flex ">
+              ${{ dish.price }}
+              <form method="delete" action="{% url 'delete_dish' dish.id %}" style="margin-left: 190px;">
+                 <button type="submit" class="btn-close" aria-label="Close" ></button>
+              </form>
+            </div>
             <div class="card-body">
               <h5 class="card-title">{{ dish.name }}</h5>
               <p class="card-text">{{dish.description}}</p>
