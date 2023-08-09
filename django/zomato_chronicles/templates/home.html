@@ -16,7 +16,7 @@
               <h5 class="card-title">{{ dish.name }}</h5>
               <p class="card-text">{{dish.description}}</p>
            <div class="d-flex justify-content-between ">
-                <form method="post">
+                <form method="get" action="{% url 'place_order' dish.id %}">
                   {% csrf_token %}
                   {{ order_form.dish_id.as_hidden }}
                   {% if dish.available %}

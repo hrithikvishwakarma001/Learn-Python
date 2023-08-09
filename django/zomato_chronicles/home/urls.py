@@ -12,4 +12,5 @@ urlpatterns = [
         views.update_order_status,
         name="update_order_status",
     ),
+    path('place_order/<int:dish_id>/', views.place_order, name='place_order'),
 ]

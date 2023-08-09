@@ -83,3 +83,31 @@ def update_order_status(request, order_id):
             "update_order_status.html",
             {"order": order},
         )
+
+
+def place_order(request, dish_id):
+    menu, orders = read_data()
+    if request.method == "POST":
+        customer_name = request.POST.get("customer_name")
+        selected_dishes = request.POST.getlist("selected_dishes[]")
+        # Create the order
+        new_order = {
+            "id": len(orders) + 1,
+            "customer_name": customer_name,
+            "dishes": [menu[int(dish_id) - 1] for dish_id in selected_dishes],
+            "status": "received",
+            "total_price": sum(
+                menu[int(dish_id) - 1]["price"] for dish_id in selected_dishes
+            ),
+        }
+        # change the available status of the in the menu dishes to False if the dish is in the order
+        # for dish in menu:
+        #     if dish.id in selected_dishes:
+        #         dish["available"] = False
+
+        print(new_order)
+        orders.append(new_order)
+        write_data(menu, orders)
+        return redirect("orders")
+
+    return render(request, "place_order.html", {"current_id": dish_id, "menu": menu})

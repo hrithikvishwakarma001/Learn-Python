@@ -168,6 +168,28 @@
             ],
             "status": "delivered",
             "total_price": 22.98
+        },
+        {
+            "id": 6,
+            "customer_name": "Hrithik vishwakarma",
+            "dishes": [
+                {
+                    "id": 1,
+                    "name": "Pasta",
+                    "price": 8.99,
+                    "available": true,
+                    "description": "Delicious pasta with a variety of sauces and ingredients."
+                },
+                {
+                    "id": 2,
+                    "name": "Pizzaa",
+                    "price": 10.99,
+                    "available": true,
+                    "description": "Authentic Italian pizza with a variety of toppings."
+                }
+            ],
+            "status": "preparing",
+            "total_price": 19.98
         }
     ]
 }
