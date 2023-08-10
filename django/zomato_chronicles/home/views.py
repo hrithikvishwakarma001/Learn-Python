@@ -217,7 +217,6 @@ def orders(request):
         {"orders": orders},
     )
 
-
 def update_order_status(request, order_id):
     if request.method == "POST":
         menu = DATA_BASE["menu"]
