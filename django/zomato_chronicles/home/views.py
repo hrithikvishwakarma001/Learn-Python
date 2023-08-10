@@ -209,7 +209,6 @@ def add_dish(request):
 
     return render(request, "add_dish.html")
 
-
 def orders(request):
     orders = DATA_BASE["orders"]
     return render(
