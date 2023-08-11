@@ -20,6 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('zomato_app.menu_urls')), 
-    # path('api/', include('zomato_app.orders_urls')),  
-    # Other URL patterns
+    path('api/', include('zomato_app.orders_urls'))
 ]
