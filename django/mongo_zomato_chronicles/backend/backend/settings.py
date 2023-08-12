@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-33yc^vn%+&s4r90j_gahcy%2jq30ue$h)5tw&!+xf__42=enzl
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh',"127.0.0.1"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "zomato_app",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -47,9 +48,27 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware'
+]
+ROOT_URLCONF = "backend.urls"
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ORIGINS = [
+    "http://localhost:3000",  # Replace with the actual origin of your React app
+    "http://127.0.0.1:5173",   # Replace with the actual origin of your React app
 ]
 
-ROOT_URLCONF = "backend.urls"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ],
+}
 
 TEMPLATES = [
     {

@@ -102,7 +102,7 @@ def get_orders_items_api(request):
         orders_items = orders_collection.find()
         serialized_orders_items = [
             {
-                "id": str(item["_id"]),
+                "_id": str(item["_id"]),
                 "customer_name": item["customer_name"],
                 "dishes_ids": item["dishes_ids"],
                 "total_price": item["total_price"],
