@@ -1,7 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from .views import WeatherView
+from . import views
 
-urlpatterns=[
- path('weather/<str:city>/', WeatherView.as_view(), name='weather'),
+urlpatterns = [
+    path("weather/<str:city>/", views.get_weather, name="get-weather"),
+    path("weather/", views.create_weather, name="create-weather"),
+    path("weather/<str:city>/update/", views.update_weather, name="update-weather"),
+    path("weather/<str:city>/delete/", views.delete_weather, name="delete-weather"),
 ]
