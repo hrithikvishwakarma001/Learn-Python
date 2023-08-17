@@ -19,7 +19,7 @@ def get_weather_data(city):
 def get_weather(request, city):
     city_data = get_weather_data(city)
     if city_data is None:
-        return JsonResponse({"error": "City not found"}, status=404)
+        return JsonResponse({"error": "City not found"}, status=200)
     return JsonResponse(city_data, status=200)
 
 @csrf_exempt
